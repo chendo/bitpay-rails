@@ -1,12 +1,10 @@
-# BitPay Rails Connector
+# BTCPayserver & BitPay Rails Client
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/bitpay/bitpay-rails/master/LICENSE)
 
 Powerful, flexible, lightweight interface to BTCPayserver and BitPay APIs.
-
 This rails gem provides a model that wraps around the bitpay-sdk API.
 
-# Using the BitPay Ruby Client Library
 ## Prerequisites
 
 This is a Rails client compatible with [Btcpayserver](https://github.com/btcpayserver/btcpayserver) and [Bitpay](https://bitpay.com/start).

@@ -7,6 +7,7 @@ require "bit_pay_rails/version"
 Gem::Specification.new do |s|
   s.name        = "bitpay-rails"
   s.version     = BitPayRails::VERSION
+  s.authors     = ["BitPay, Inc."]
   s.summary     = "BTCpay & Bitpay rails adapter"
   s.license     = "MIT"
 

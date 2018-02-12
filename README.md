@@ -66,6 +66,7 @@ Open your browser to 'https://your-btcpayserver.com/api-access-request?pairingCo
 #### Pairing with Bitpay
 Same as above but instead visit [https://test.bitpay.com/dashboard/merchant/api-tokens](https://test.bitpay.com/dashboard/merchant/api-tokens) and approve the pairing code that has was returned in console.
 
+### Testing the Client
 ```bash
 2.2.2 :006 > client.create_invoice(price: 100, currency: "USD")
  => {"url"=>"https://test.bitpay.com/invoice?id=KsZaFPGbeP1fU3vwyqjSLD", "status"=>"new", "btcPrice"=>"0.450593", "btcDue"=>"0.450593", "price"=>100, "currency"=>"USD", "exRates"=>{"USD"=>221.93}, "invoiceTime"=>1430156419974, "expirationTime"=>1430157319974, "currentTime"=>1430156420024, "guid"=>"8044be4f-5e33-4f2a-92a7-e852f171eb3a", "id"=>"KsZaFPGbeP1fU3vwyqjSLD", "btcPaid"=>"0.000000", "rate"=>221.93, "exceptionStatus"=>false, "transactions"=>[], "flags"=>{"refundable"=>false}, "paymentUrls"=>{"BIP21"=>"bitcoin:mpjEFaaGsz6CFckdVmYquyhBFgRp2DK8hs?amount=0.450593", "BIP72"=>"bitcoin:mpjEFaaGsz6CFckdVmYquyhBFgRp2DK8hs?amount=0.450593&r=https://test.bitpay.com/i/KsZaFPGbeP1fU3vwyqjSLD", "BIP72b"=>"bitcoin:?r=https://test.bitpay.com/i/KsZaFPGbeP1fU3vwyqjSLD", "BIP73"=>"https://test.bitpay.com/i/KsZaFPGbeP1fU3vwyqjSLD"}, "token"=>"5qP6MeqxQmMfwRKdrEzH6jLLGnDW2fShxJZae7swPicQ6psa1YGqiruRKFfWKETc6E", "buyer"=>{}} 

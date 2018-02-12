@@ -2,7 +2,7 @@ require 'bitpay_sdk'
 
 class BitPayClient < ActiveRecord::Base
   before_create :make_pem
-
+  validates_presence_of :api_uri
 
   def get_pairing_code(params = {})
     params[:facade] = self.facade
@@ -66,7 +66,7 @@ class BitPayClient < ActiveRecord::Base
 
   def new_client
     params = {api_uri: self.api_uri, pem: get_pem}
-    params[:insecure] = true if (Rails.env == "development" || Rails.env == "test")
+    #params[:insecure] = true if (Rails.env == "development" || Rails.env == "test")
     BitPay::SDK::Client.new(params)
   end
 
@@ -77,7 +77,7 @@ class BitPayClient < ActiveRecord::Base
   end
 
   def key_and_crypt
-    key = ActiveSupport::KeyGenerator.new(ENV['BPSECRET']).generate_key(ENV['BPSALT'])
+    key = ActiveSupport::KeyGenerator.new(ENV['BPSECRET']).generate_key(ENV['BPSALT'],32)
     crypt = ActiveSupport::MessageEncryptor.new(key)
     return key, crypt
   end

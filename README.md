@@ -18,7 +18,7 @@ To get started you need to have access to a BTCPayserver instance or host your o
 In your Gemfile:
 
 ```ruby
-gem 'bitpay-rails', git: 'https://github.com/btcpayserver/bitpay-rails'
+gem 'bitpay-rails', require: 'bit_pay_rails', git: 'https://github.com/btcpayserver/bitpay-rails'
 ```
 
 ### Configuration

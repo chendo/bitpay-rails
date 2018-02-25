@@ -19,6 +19,7 @@ In your Gemfile:
 
 ```ruby
 gem 'bitpay-rails', require: 'bit_pay_rails', git: 'https://github.com/btcpayserver/bitpay-rails'
+gem 'bitpay-sdk', require: 'bitpay_sdk', git: 'https://github.com/bitpay/ruby-client'
 ```
 
 ### Configuration

@@ -55,13 +55,7 @@ class BitPayClient < ActiveRecord::Base
   end
 
   def tell_client(method, *args)
-    begin
-      new_client.send(method, *args)
-    rescue Exception => e
-      error = ("#{e.class}, #{e.message}")
-      logger.error(error)
-      return (error)
-    end
+    new_client.send(method, *args)
   end
 
   def new_client
